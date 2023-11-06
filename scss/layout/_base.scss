@@ -145,6 +145,12 @@ img{
 		margin: auto;
 	}
 }
+.w94-s{
+	@include mq(sp){
+		width: 94% !important;
+		margin: auto;
+	}
+}
 .tb-w95{
 	@include mq(tb){
 		width: 95% !important;

@@ -125,18 +125,23 @@
 				}
 			}
 			&.-conceptText{
+				top: 100%;
+				left: 23%;
+				transform: translate(-50%, -50%);
+				width: 40%;
 				@include mq(tb){
 					top: 90%;
 					left: 10%;
-					transform: translate(-50%, -50%);
 					width: 40%;
 				}
 			}
 			&.-top-kawagoeBtn{
+				top: 90%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 85%;
 				@include mq(tb){
 					top: 88%;
-					left: 50%;
-					transform: translate(-50%, -50%);
 					width: 30%;
 					max-width: 420px;
 				}

@@ -179,7 +179,7 @@
 				&.-logoArea{
 					@include mq(sp){
 						width: 100%;
-						padding: 1vh 10px;
+						padding: 1vh 40px 0 10px;
 					}
 					@include mq(tb){
 						width: 13%;
@@ -193,7 +193,7 @@
 					}
 					@include mq(sp){
 						width: 100%;
-						padding: .5vh 10px 1vh;
+						padding: .5vh 10px 2vh;
 					}
 					@include mq(tb){
 						width: calc(50%);

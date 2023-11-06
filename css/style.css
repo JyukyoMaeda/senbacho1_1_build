@@ -211,6 +211,13 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .w94-s {
+    width: 94% !important;
+    margin: auto;
+  }
+}
+
 @media screen and (min-width: 767px) {
   .tb-w95 {
     width: 95% !important;
@@ -691,19 +698,28 @@ img {
     width: auto;
   }
 }
+.l-contents.-img-bg .l-contentsBox.-conceptText {
+  top: 100%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+}
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-conceptText {
     top: 90%;
     left: 10%;
-    transform: translate(-50%, -50%);
     width: 40%;
   }
+}
+.l-contents.-img-bg .l-contentsBox.-top-kawagoeBtn {
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
 }
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-top-kawagoeBtn {
     top: 88%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 30%;
     max-width: 420px;
   }
@@ -1060,7 +1076,7 @@ img {
 @media screen and (max-width: 768px) {
   .l-flex--area .l-flex--contents.-header-top .flexItem.-logoArea {
     width: 100%;
-    padding: 1vh 10px;
+    padding: 1vh 40px 0 10px;
   }
 }
 @media screen and (min-width: 767px) {
@@ -1078,7 +1094,7 @@ img {
 @media screen and (max-width: 768px) {
   .l-flex--area .l-flex--contents.-header-top .flexItem.-center-contentsArea {
     width: 100%;
-    padding: 0.5vh 10px 1vh;
+    padding: 0.5vh 10px 2vh;
   }
 }
 @media screen and (min-width: 767px) {
