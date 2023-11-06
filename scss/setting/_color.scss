@@ -1,19 +1,15 @@
 // フォントカラー
 $main-color--b: #000000;
 $main-color--w: #ffffff;
-$main-color--gray: #ebebeb;
-$main-color--beige: #b1a595;
+$main-color--gray: #8f8f8fe6;
+
+$site-color01: #3f2d00;
+$site-color02: #6d0000;
+$site-color01-hover: #3f2d008e;
 
 $main-color--tel: #df2323;
 $main-color--textShadow-start: #7488a31e;
 $main-color--textShadow-end: #7488a349;
-
-// サイト独自のカラー
-$site-color01: #002a37;
-$site-color01-hover: #024c63;
-$site-balloon-color: #002a37;
-
-$side-nav: #759d59;
 
 
 
@@ -38,13 +34,21 @@ $item-hover--b:#dfdddd94;
 // その他
 $yellow-b: #ffd40099;
 $pink-t: #E76179;
-$contact-item-1: #002a37;
-$contact-item-2: hsl(194, 100%, 11%, 80%);
-$contact-item-3: hsl(194, 100%, 11%, 60%);
-$contact-item-4: hsl(194, 100%, 11%, 40%);
+$red: #FF0100;
+$beige: #775800;
+$contact-item-1: #000000;
+$contact-item-2: #4D4D4D;
+$contact-item-3: #868686;
+$contact-item-4: #CACBCB;
+$swiper-title_balloon: #635F3A;
 $swiper-active: #CEBB74;
 
 
+
 // ホバー関係
-$nav-hover-bg: #41606a;
-$nav-active-bg: #002a37;
+$nav-hover-bg: #33261573;
+$nav-active-bg: #50462a;
+$parkBtn-c: linear-gradient(180deg, #1687ed, #14375a);
+$ballParkBtn-c: linear-gradient(180deg, #29ABE2, #1f6f92);
+$amusementBtn-c: linear-gradient(180deg, #1ab1a7, #155854);
+$museumBtn-c:  linear-gradient(180deg, #43BF7B, #247046);

@@ -2,48 +2,19 @@
 .l-flex--area{
 	height: 100%;
 	.l-flex--contents{
+		&.-reverse_pc{
+			@include mq(tb){
+				.flexItem{
+					&:nth-child(1){
+						order: 2;
+					}
+					&:nth-child(2){
+						order: 1;
+					}
+				}
+			}
+		}
 		.flexItem{
-			&.-noPD{
-				padding: 0 !important;
-			}
-			&.-noPD_r{
-				padding-right: 0 !important;
-			}
-			&.-noPD_l{
-				padding-left: 0 !important;
-			}
-			// pcのみ
-			&.-noPD_pc{
-				@include mq(tb){
-					padding: 0 !important;
-				}
-			}
-			&.-noPD_r_pc{
-				@include mq(tb){
-					padding-right: 0 !important;
-				}
-			}
-			&.-noPD_l_pc{
-				@include mq(tb){
-					padding-left: 0 !important;
-				}
-			}
-			// spのみ
-			&.-noPD_s{
-				@include mq(sp){
-					padding: 0 !important;
-				}
-			}
-			&.-noPD_r_s{
-				@include mq(sp){
-					padding-right: 0 !important;
-				}
-			}
-			&.-noPD_l_s{
-				@include mq(sp){
-					padding-left: 0 !important;
-				}
-			}
 			&.-youtubeBox{
 				padding: 0 5vw;
 				@include mq(tb){
@@ -61,40 +32,441 @@
 				}
 			}
 		}
-		// スマホ時 > 順番逆
-		&.-reverse_s{
-			@include mq(sp){
-				.flexItem{
-					&:nth-child(1){
-						order: 2;
-					}
-					&:nth-child(2){
-						order: 1;
-					}
-				}
-			}
-		}
-		&.-titleArea{
+		&.-f01{
 			display: flex;
-			flex-wrap: nowrap;
-			width: 100%;
-			height: 100%;
-
+			@include mq(sp){
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			&.-center{
+				justify-content: center;
+			}
 			.flexItem{
-				width: 80%;
-				height: 100%;
-					&:nth-child(1){
+				width: 100%;
+				@include mq(tb){
+					width: 50%;
+				}
+				&--nTitleArea{
+					position: relative;
+					padding-left: 25%;
+					@include mq(tb){
+						padding-left: 25%;
+					}
+					&::after{
+						position: absolute;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+
+						font-size: 17vw;
+						color: #C9CACA;
+						font-family: "garamond-premier-pro-display", serif;
+						font-weight: 400;
+						font-style: normal;
+						letter-spacing: 5px;
 						@include mq(tb){
-							width: 53%;
+							font-size: 7vw;
+							font-style: italic;
 						}
 					}
-					&:nth-child(2){
+					&.-n01{
+						&::after{
+							content:"01";
+						}
+					}
+					&.-n02{
+						&::after{
+							content:"02";
+						}
+					}
+					&.-n03{
+						&::after{
+							content:"03";
+						}
+					}
+				}
+				&--text{
+					// @include mq(tb){
+					// 	padding: 0 10%;
+					// }
+					&:nth-child(1){
 						@include mq(tb){
 							width: 47%;
 						}
 					}
+				}
+			}
+			&.-mapArea{
+				@include mq(sp){
+					margin: 0 1vw;
+				}
 			}
 		}
+		&.-f03{
+			display: flex;
+			@include mq(sp){
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			.flexItem{
+				width: 100%;
+				@include mq(tb){
+					width: 33.3333%;
+					margin: 0 10px;
+				}
+				&--text{
+					// @include mq(tb){
+					// 	padding: 0 10%;
+					// }
+					&:nth-child(1){
+						@include mq(tb){
+							width: 47%;
+						}
+					}
+				}
+			}
+		}
+		&.-f04{
+			display: flex;
+			@include mq(sp){
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			.flexItem{
+				width: 100%;
+				@include mq(tb){
+					width: 25%;
+					margin: 0 10px;
+				}
+				&--text{
+					// @include mq(tb){
+					// 	padding: 0 10%;
+					// }
+					&:nth-child(1){
+						@include mq(tb){
+							width: 47%;
+						}
+					}
+				}
+			}
+			&.-mapArea{
+				@include mq(sp){
+					margin: 0 1vw;
+				}
+			}
+		}
+
+		&.-header-top{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			padding: 1vh 2.5vw 0;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				padding: 1.5vh 0 0;
+			}
+			.flexItem{
+				&.-logoArea{
+					@include mq(sp){
+						width: 100%;
+						padding: 1vh 10px;
+					}
+					@include mq(tb){
+						width: 13%;
+						margin-left: auto;
+					}
+				}
+				&.-center-contentsArea{
+					margin: auto;
+					span{
+						width: auto;
+					}
+					@include mq(sp){
+						width: 100%;
+						padding: .5vh 10px 1vh;
+					}
+					@include mq(tb){
+						width: calc(50%);
+						padding: 0 2.1%;
+					}
+					@include mq(pc){
+						margin-top: 0.7%;
+					}
+				}
+				&.-right-contactArea{
+					width: calc(30%);
+					margin-right: auto;
+					p{
+						margin-top: .5vh;
+					}
+				}
+			}
+		}
+		&.-header-c-inner{
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		&.-header-contactArea,
+		&.-footer-contactArea{
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			border: 1px solid $site-color01;
+			.flexItem{
+				width: 50%;
+				a{
+					display: block;
+					width: 100%;
+					height: 100%;
+					transition: .5s all;
+					span{
+						    padding: 0.5vh 0 2vh;
+
+					}
+					&:hover{
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+		&.-columnBox{
+
+			align-items: center;
+			@include mq(tb){
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: space-around;
+			}
+			.flexItem{
+				padding: 2% 0;
+				&.title{
+					@include mq(tb){
+						width: 30%;
+					}
+				}
+				&.des{
+					@include mq(tb){
+						width: 70%;
+					}
+				}
+			}
+		}
+		&.-columnBox02{
+			display: flex;
+			flex-wrap: wrap;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				align-items: flex-start;
+				justify-content: space-around;
+			}
+			.flexItem{
+				width: 100%;
+				padding: 0 5%;
+				@include mq(tb){
+					width: 50%;
+					padding: 0 2%;
+				}
+			}
+	}
+
+		&.-flexContent__box{
+			display: flex;
+			@include mq(sp){
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
+				flex-wrap: nowrap;
+			}
+			.flexItem{
+				@include mq(sp){
+					&:nth-child(1){
+						width: 100%;
+						// padding-right: 5%;
+					}
+					&:nth-child(2){
+						width: 100%;
+					}
+				}
+				@include mq(tb){
+					&:nth-child(1){
+						width: 60%;
+						padding-right: 5%;
+					}
+					&:nth-child(2){
+						width: 40%;
+					}
+				}
+			}
+		}
+		&.-flexContent__box02{
+			display: flex;
+			@include mq(sp){
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
+				flex-wrap: nowrap;
+				padding: 0 10%;
+			}
+			.flexItem{
+				@include mq(sp){
+					&:nth-child(1){
+						width: 100%;
+						padding-right: 50%;
+					}
+					&:nth-child(2){
+						width: 100%;
+					}
+				}
+				@include mq(tb){
+					&:nth-child(1){
+						width: 35%;
+						padding-right: 5%;
+					}
+					&:nth-child(2){
+						width: 75%;
+					}
+				}
+			}
+		}
+
+		&.-f-kukakuArea{
+			display: flex;
+			flex-wrap: nowrap;
+			flex-flow: column;
+			.flexItem{
+				width: 100%;
+				&.-concept-kukakuArea{
+					&-01{
+						@include mq(sp){
+
+						}
+						@include mq(tb){
+							order: 2;
+						}
+					}
+					&-02{
+						@include mq(sp){
+
+						}
+						@include mq(tb){
+							order: 1;
+						}
+					}
+					&-03{
+						order: 3;
+					}
+				}
+			}
+		}
+		&.-f-borderBox{
+			display: flex;
+			flex-wrap: wrap;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.flexItem{
+				// ボーダーボックス > タイトル
+				&.-b-titleArea{
+					height: 100%;
+					align-items: center;
+					@include mq(tb){
+						position: relative;
+						width: 25%;
+					}
+					&::after{ // 矢印
+						@include mq(tb){
+							content: "";
+							position: absolute;
+							top: 50%;
+							right: -3%;
+							transform: translateY(-50%);
+	
+							width: 0;
+							height: 0;
+							border-left: 15px solid #333333;
+							border-top: 15px solid transparent;
+							border-bottom: 15px solid transparent;
+						}
+					}
+				}
+				// ボーダーボックス > 内容
+				&.-b-textArea{
+					@include mq(tb){
+						width: 75%;
+						padding-left: 5%;
+					}
+				}
+			}
+		}
+		&.-f-PABM-btn{
+			display: flex;
+			flex-wrap: wrap;
+			@include mq(tb){
+				// flex-wrap: nowrap;
+				justify-content: space-around;
+			}
+			.flexItem{
+				@include mq(sp){
+					width: 100%;
+					margin: 10px 0 !important;
+				}
+				@include mq(tb){
+					width: 45%;
+					// width: 25%;
+					margin: 0 5px;
+					&:nth-child(1),
+					&:nth-child(2){
+						margin-bottom: 10px;
+					}
+				}
+				&.-left{
+					margin: 0 5px 0 0;
+				}
+				&.-right{
+					margin: 0 0 0 5px;
+				}
+			}
+		}
+
+
+
+		// スマホ > 横並び
+		&.-setsubi-itemArea_sp{
+			display: flex;
+			@include mq(sp){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			.flexItem{
+				&:nth-child(1){
+					@include mq(sp){
+						width: 50%;
+						padding-right: 2.5%;
+					}
+				}
+				&:nth-child(2){
+					@include mq(sp){
+						width: 50%;
+						padding-left: 2.5%;
+					}
+				}
+			}
+		}
+
 		&.-tel{//電話番号エリア
 			display: flex;
 			flex-wrap: nowrap;
@@ -220,45 +592,6 @@
 				}
 			}
 		}
-		&.-contact-box_okano{
-			display: flex;
-			flex-wrap: nowrap;
-			justify-content: space-between;
-			width: 100%;
-			margin: auto;
-			@include mq(tb){
-				width: 75%;
-				justify-content: space-evenly;
-			}
-			.flexItem{
-				width: calc(30%);
-				@include mq(tb){
-					width: 30%;
-				}
-				&:nth-child(1){
-					.l-linkImg{
-						background: $contact-item-1;
-					}
-				}
-				&:nth-child(2){
-					.l-linkImg{
-						background: $contact-item-2;
-					}
-
-				}
-				&:nth-child(3){
-					.l-linkImg{
-						background: $contact-item-3;
-					}
-
-				}
-				// &:nth-child(4){
-				// 	.l-linkImg{
-				// 		background: $contact-item-4;
-				// 	}
-				// }
-			}
-		}
 		&.-tab-box{
 			width: 90vw;
 			margin: auto;
@@ -280,204 +613,6 @@
 				}
 			}
 		}
-
-
-
-
-		&.-columnBox{
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			@include mq(tb){
-				flex-wrap: nowrap;
-				align-items: flex-start;
-				justify-content: space-around;
-			}
-			.flexItem{
-				width: 100%;
-				padding: 0 5%;
-				@include mq(tb){
-					width: 50%;
-					padding: 0 2%;
-				}
-			}
-			&.-w_7-3{
-				@include mq(tb){
-					.flexItem{
-						&.-textArea{
-							width: 70%;
-						}
-						&.-picArea{
-							width: 30%;
-						}
-					}
-				}
-			}
-		}
-		&.-columnBox02{
-				display: flex;
-				flex-wrap: nowrap;
-				align-items: flex-start;
-				justify-content: space-around;
-				.flexItem{
-					width: 100%;
-					padding: 0 5%;
-					@include mq(tb){
-						width: 50%;
-						padding: 0 2%;
-					}
-					&.-left_nav{
-						@include mq(tb){
-							width: 16.66666vw;
-							height: 100%;
-							background: $side-nav;
-						}
-					} 
-					&.-right_contents{
-						@include mq(tb){
-							width: calc(100% - 16.66666vw);
-							height: 100%;
-						}
-					}
-				}
-		}
-		&.-columnBox03{
-			display: flex;
-			flex-wrap: wrap;
-			align-items: flex-start;
-			@include mq(tb){
-				justify-content: space-around;
-			}
-			.flexItem{
-				width: 100%;
-				padding: 0 3%;
-				@include mq(tb){
-					width: 33.3333%;
-					padding: 0 2%;
-					&:nth-child(1),
-					&:nth-child(4)
-					{
-						padding: 0 4% 0 0;
-					}
-					&:nth-child(3),
-					&:nth-child(6)
-					{
-						padding: 0 0 0 4%;
-					}
-				}
-			}
-		}
-		&.-columnBox04{
-			display: flex;
-			flex-wrap: wrap;
-			align-items: flex-start;
-			@include mq(tb){
-				flex-wrap: nowrap;
-				justify-content: space-around;
-			}
-			&.-pc-wrap{
-				@include mq(tb){
-					flex-wrap: wrap;
-				}
-			}
-			.flexItem{
-				width: 50%;
-				padding: 0 2%;
-				@include mq(tb){
-					width: 25%;
-					padding: 0 1%;
-				}
-			}
-		}
-		&.-columnBox05{
-			display: flex;
-			flex-wrap: wrap;
-			align-items: flex-start;
-			@include mq(tb){
-				flex-wrap: nowrap;
-				justify-content: space-around;
-			}
-			&.-pc-wrap{
-				@include mq(tb){
-					flex-wrap: wrap;
-				}
-			}
-			.flexItem{
-				width: 50%;
-				padding: 0 2%;
-				@include mq(tb){
-					width: 25%;
-					padding: 0 2%;
-				}
-			}
-		}
-		&.-columnBox_sp{//spのみ > flex
-			display: flex;
-			flex-wrap: nowrap;
-			align-items: flex-end;
-			@include mq(tb){
-				flex-wrap: wrap;
-				align-items: flex-start;
-				justify-content: space-around;
-			}
-			.flexItem{
-				width: 50%;
-				padding: 0 5%;
-				@include mq(tb){
-					width: 100%;
-					padding: 0 2%;
-				}
-			}
-		}
-
-		&.-gaiyo-2_1{
-			display: flex;
-			flex-wrap: wrap;
-			align-items:center;
-			@include mq(tb){
-				flex-wrap: nowrap;
-				justify-content: space-around;
-				align-items: flex-start;
-			}
-			.flexItem{
-				&:nth-child(1){
-					width: 60%;
-					padding: 0 2%;
-					margin: auto;
-					@include mq(tb){
-						width: 55%;
-						padding: 0 2%;
-					}
-				}
-				&:nth-child(2){
-					width: 60%;
-					padding: 0 2%;
-					margin: auto;
-					@include mq(tb){
-						width: 30%;
-						padding: 0 2%;
-					}
-				}
-
-			}
-		}
-		&.-gaiyo{
-			display: flex;
-			flex-wrap: wrap;
-			align-items: flex-start;
-			@include mq(tb){
-				flex-wrap: nowrap;
-				justify-content: space-around;
-			}
-			.flexItem{
-				width: 100% !important;
-				@include mq(tb){
-					width: 50% !important;
-					padding: 0 2%;
-				}
-		}
-		}
-
 	}
 }
 

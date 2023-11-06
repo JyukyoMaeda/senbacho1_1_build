@@ -66,11 +66,6 @@
                     font-size: clamp(10px, 1vw, 16px);
                 }
             }
-            &.-s10{
-                @include mq(sp){
-                    font-size: 10px;
-                }
-            }
             &.-s11{
                 @include mq(sp){
                     font-size: 11px;
@@ -179,6 +174,14 @@
             @include mq(tb-pc1400){
                 font-size: 3.5rem;
             }
+            &.-v02{
+                @include mq(tb){
+                    font-size: 2.5rem;
+                }
+                @include mq(tb-pc1400){
+                    font-size: 2.5rem;
+                }
+            }
         }
         &.-size3L_2{
             font-size: 24px;
@@ -212,61 +215,6 @@
                 @include mq(tb){
                     font-size: 5.5rem;
                 }
-            }
-        }
-        &.-s10{
-            @include mq(sp){
-                font-size: 10px;
-            }
-        }
-        &.-s12{
-            @include mq(sp){
-                font-size: 12px;
-            }
-        }
-        &.-s14{
-            @include mq(sp){
-                font-size: 14px;
-            }
-        }
-        &.-s15{
-            @include mq(sp){
-                font-size: 15px;
-            }
-        }
-        &.-s16{
-            @include mq(sp){
-                font-size: 16px;
-            }
-        }
-        &.-s17{
-            @include mq(sp){
-                font-size: 17px;
-            }
-        }
-        &.-s18{
-            @include mq(sp){
-                font-size: 18px;
-            }
-        }
-        &.-s20{
-            @include mq(sp){
-                font-size: 20px;
-            }
-        }
-        &.-s24{
-            @include mq(sp){
-                font-size: 24px;
-            }
-        }
-        &.-s30{
-            @include mq(sp){
-                font-size: 30px;
-            }
-        }
-        &.-s32{
-            @include mq(sp){
-                font-size: 32px;
             }
         }
     // 位置
@@ -312,9 +260,9 @@
     &.-b{font-weight: bold !important;}
 
     // 形
-    &.-family01{//しっぽり明朝
-        font-family: "shippori-mincho", sans-serif;
-        font-weight: 400;
+    &.-family01{//リュウミン
+        font-family: "a-otf-ryumin-pr6n", serif;
+        font-weight: 300;
         font-style: normal;
     }
     &.-family02{//A1MinchoStd Bold代用
@@ -322,10 +270,8 @@
         font-weight: 400;
         font-style: normal;
     }
-    &.-family03{//しっぽり
-        font-family: "source-han-sans-japanese", sans-serif;
-        font-weight: 700;
-        font-style: normal;
+    &.-family03{//Trajan-pro
+        font-family: "trajan-pro-3", serif;
     }
     &.-family04{//garamond
         font-family: "garamond-premier-pro-display", serif;
@@ -333,12 +279,7 @@
         font-style: normal;
     }
     &.-family05{//メイリオ
-        font-family:'メイリオ', 'Meiryo', sans-serif;
-    }
-    &.-family06{//Trajan
-        font-family: "trajan-pro-3", serif;
-        font-weight: 400;
-        font-style: normal;
+        // font-family:'メイリオ', 'Meiryo', sans-serif;
     }
 
     &.-REQUEST{
@@ -404,6 +345,30 @@
             transform: translate(-50%,-50%);
         }
     }
+    &.-DESIGN{
+        position: relative;
+        &::after{
+            content: "TOWN DESIGN";
+            font-size: .6vw;
+            font-weight: bold;
+            position: absolute;
+            top:20%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    &.-PLAN{
+        position: relative;
+        &::after{
+            content: "PLANNIG";
+            font-size: .6vw;
+            font-weight: bold;
+            position: absolute;
+            top:20%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
     &.-BUILT{
         position: relative;
         &::after{
@@ -443,7 +408,7 @@
     &.-JYUKYO{
         position: relative;
         &::after{
-            content: "JYUKYO QUALITY";
+            content: "QUALITY";
             font-size: .5vw;
             font-weight: bold;
             position: absolute;
@@ -482,6 +447,12 @@
     &.-green{
         text-shadow: 1px 1px 10px rgb(236, 236, 236);
     }
+    &.-beige{
+        color: $beige;
+        a{
+            color: $beige;
+        }
+    }
     &.-pink{
         // color: $text-pink;
         text-shadow: 1px 1px 10px rgb(238, 238, 238);
@@ -497,6 +468,12 @@
         color: $site-color01;
         a{
             color: $site-color01;
+        }
+    }
+    &.-site-c02{
+        color: $site-color02;
+        a{
+            color: $site-color02;
         }
     }
     .w-auto{
@@ -596,7 +573,10 @@
     // アイコン
     &.iconTitle{
         position: relative;
-        padding-left: 2.5vw;
+        padding-left: 3.5vw;
+        @include mq(tb){
+            padding-left: 2.5vw;
+        }
         .icon{
             position: absolute;
             top: 50%;

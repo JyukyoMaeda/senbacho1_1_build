@@ -58,9 +58,12 @@
 
 body{
 	animation: fadein 2s forwards;
+	@include mq(sp){
+		margin-bottom: 11vh;
+	}
 }
 img{
-	pointer-events: none;
+	// pointer-events: none;
 	user-drag: none;
 	-webkit-user-drag: none;
 	-moz-user-select: none;
@@ -68,24 +71,66 @@ img{
 }
 
 
+.l-coming-soon{
+	width: auto;
+	background: black;
+	img{
+		opacity: 0.5;
+	}
+}
+
 
 
 .w1200{
-	width: 95% !important;
+	width: 75% !important;
 	max-width: 1200px;
 	margin: auto;
+	text-align: center;
 	&.-s100{
-		width: 100% !important;
+		@include mq(sp){
+			width: 100% !important;
+		}
+	}
+	&.-s95{
+		@include mq(sp){
+			width: 95% !important;
+		}
 	}
 }
 .w1050{
-	width: 95%;
+	width: 95% !important;
 	max-width: 1050px;
 	margin: auto;
 }
 .w850{
-	width: 95%;
+	width: 95% !important;
 	max-width: 850px;
+	margin: auto;
+}
+.w750{
+	width: 60% !important;
+	max-width: 750px;
+	margin: auto;
+	@include mq(sp){
+		width: 90%;
+	}
+	&.-s85{
+		@include mq(sp){
+			width: 85% !important;
+		}
+	}
+}
+.w570{
+	width: 30% !important;
+	max-width: 570px;
+	margin: auto;
+	@include mq(sp){
+		width: 90%;
+	}
+}
+.w400{
+	width: 65%;
+	max-width: 400px;
 	margin: auto;
 }
 .w90-s{
@@ -106,7 +151,6 @@ img{
 		margin: auto;
 	}
 }
-
 
 // 幅調整用 margin = 要素外の空間
 // 上のみ
@@ -156,9 +200,9 @@ img{
 		margin-bottom: 1vh !important;
 	}
 }
-.l-mgb_2_s{
+.l-mgb_3_s{
 	@include mq(sp){
-		margin-bottom: 2vh !important;
+		margin-bottom: 3vh !important;
 	}
 }
 .l-mgb_5_s{
@@ -166,30 +210,10 @@ img{
 		margin-bottom: 5vh !important;
 	}
 }
-.l-mgb_8_s{
-	@include mq(sp){
-		margin-bottom: 8vh !important;
-	}
-}
-.l-mgb_10_s{
-	@include mq(sp){
-		margin-bottom: 10vh !important;
-	}
-}
-.l-mgb_15_s{
-	@include mq(sp){
-		margin-bottom: 15vh !important;
-	}
-}
 .l-mgb_1{
 	margin-bottom: 1vh !important;
 	@include mq(tb){
 		margin-bottom: 1vh !important;
-	}
-	&.-s_5{
-		@include mq(sp){
-			margin-bottom: 5vh !important;
-		}
 	}
 }
 .l-mgb_2{
@@ -202,6 +226,11 @@ img{
 			margin-bottom: 1vh !important;
 		}
 	}
+	&.-s_4{
+		@include mq(sp){
+			margin-bottom: 4vh !important;
+		}
+	}
 	@include mq(tb){
 		margin-bottom: 3vh !important;
 	}
@@ -211,12 +240,27 @@ img{
 	@include mq(tb){
 		margin-bottom: 5vh !important;
 	}
+	&.-s_1{
+		@include mq(sp){
+			margin-bottom: 1vh !important;
+		}
+	}
+	&.-s_5{
+		@include mq(sp){
+			margin-bottom: 5vh !important;
+		}
+	}
 }
 .l-mgb_10{
 	margin-bottom : 8vh !important;
 	&.-s_1{
 		@include mq(sp){
 			margin-bottom: 1vh !important;
+		}
+	}
+	&.-s_3{
+		@include mq(sp){
+			margin-bottom: 3vh !important;
 		}
 	}
 	&.-s_5{
@@ -228,18 +272,14 @@ img{
 		margin-bottom: 10vh !important;
 	}
 }
+.l-mgb_15{
+	margin-bottom: 8vh;
+	@include mq(tb){
+		margin-bottom: 15vh;
+	}
+}
 .l-mgb_20{
-	margin-bottom : 10vh !important;
-	&.-s_1{
-		@include mq(sp){
-			margin-bottom: 1vh !important;
-		}
-	}
-	&.-s_5{
-		@include mq(sp){
-			margin-bottom: 5vh !important;
-		}
-	}
+	margin-bottom : 8vh !important;
 	@include mq(tb){
 		margin-bottom: 20vh !important;
 	}
@@ -270,6 +310,12 @@ img{
 	}
 }
 // 下のみ
+.l-pdb_1{
+	padding-bottom : 1.5vh !important;
+	@include mq(tb){
+		padding-bottom: 1.5vh !important;
+	}
+}
 .l-pdb_5{
 	padding-bottom : 2.5vh !important;
 	@include mq(tb){
@@ -282,10 +328,35 @@ img{
 		padding-bottom: 10vh !important;
 	}
 }
-
-.border{
-	border-bottom: 1px solid black;
+.l-pdb_20{
+	padding-bottom : 5vh !important;
 	@include mq(tb){
-
+		padding-bottom: 20vh !important;
 	}
+}
+
+
+
+.l-pdb_1_s{
+	@include mq(sp){
+		padding-bottom: 1vh !important;
+	}
+}
+
+.l-mgl_3_s{
+	@include mq(sp){
+		margin-left: 3vw;
+	}
+}
+.l-mgl-_15{
+	margin-left: -1.5%;
+}
+.l-mgl-_4{
+	margin-left: -4%;
+}
+
+.l-pdl_1{
+	// @include mq(sp){
+		padding-left: 1vh !important;
+	// }
 }
