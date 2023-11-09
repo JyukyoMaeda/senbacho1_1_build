@@ -85,6 +85,10 @@
 
 			// TOP > コンセプトエリア > ボタン
 			&.-concept_btn{
+				top: 22%;
+				left: 86%;
+				transform: translate(-50%, -50%);
+				width: 13%;
 				@include mq(tb){
 					top: 10%;
 					left: 92%;
@@ -93,6 +97,10 @@
 				}
 			}
 			&.-concept_btn02{
+				top: 45%;
+				left: 86%;
+				transform: translate(-50%, -50%);
+				width: 13%;
 				@include mq(tb){
 					top: 37%;
 					left: 41%;
@@ -101,6 +109,10 @@
 				}
 			}
 			&.-concept_btn03{
+				top: 69.5%;
+				left: 86%;
+				transform: translate(-50%, -50%);
+				width: 13%;
 				@include mq(tb){
 					top: 63.5%;
 					left: 92%;
@@ -109,6 +121,10 @@
 				}
 			}
 			&.-concept_btn04{
+				top: 94.5%;
+				left: 86%;
+				transform: translate(-50%, -50%);
+				width: 13%;
 				@include mq(tb){
 					top: 88%;
 					left:41%;
@@ -125,8 +141,8 @@
 				}
 			}
 			&.-conceptText{
-				top: 100%;
-				left: 23%;
+				top: 34%;
+				left: 21%;
 				transform: translate(-50%, -50%);
 				width: 40%;
 				@include mq(tb){
@@ -139,7 +155,7 @@
 				top: 90%;
 				left: 50%;
 				transform: translate(-50%, -50%);
-				width: 85%;
+				width: 58%;
 				@include mq(tb){
 					top: 88%;
 					width: 30%;

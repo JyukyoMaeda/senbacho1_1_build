@@ -136,7 +136,7 @@ img {
 }
 
 .w1200 {
-  width: 75% !important;
+  width: 85% !important;
   max-width: 1200px;
   margin: auto;
   text-align: center;
@@ -349,8 +349,18 @@ img {
   margin-bottom: 8vh !important;
 }
 @media screen and (max-width: 768px) {
+  .l-mgb_10.-s_0 {
+    margin-bottom: 0vh !important;
+  }
+}
+@media screen and (max-width: 768px) {
   .l-mgb_10.-s_1 {
     margin-bottom: 1vh !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .l-mgb_10.-s_2 {
+    margin-bottom: 2vh !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -658,6 +668,12 @@ img {
   width: 100%;
   position: absolute;
 }
+.l-contents.-img-bg .l-contentsBox.-concept_btn {
+  top: 22%;
+  left: 86%;
+  transform: translate(-50%, -50%);
+  width: 13%;
+}
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-concept_btn {
     top: 10%;
@@ -665,6 +681,12 @@ img {
     transform: translate(-50%, -50%);
     width: auto;
   }
+}
+.l-contents.-img-bg .l-contentsBox.-concept_btn02 {
+  top: 45%;
+  left: 86%;
+  transform: translate(-50%, -50%);
+  width: 13%;
 }
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-concept_btn02 {
@@ -674,6 +696,12 @@ img {
     width: auto;
   }
 }
+.l-contents.-img-bg .l-contentsBox.-concept_btn03 {
+  top: 69.5%;
+  left: 86%;
+  transform: translate(-50%, -50%);
+  width: 13%;
+}
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-concept_btn03 {
     top: 63.5%;
@@ -681,6 +709,12 @@ img {
     transform: translate(-50%, -50%);
     width: auto;
   }
+}
+.l-contents.-img-bg .l-contentsBox.-concept_btn04 {
+  top: 94.5%;
+  left: 86%;
+  transform: translate(-50%, -50%);
+  width: 13%;
 }
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-concept_btn04 {
@@ -699,8 +733,8 @@ img {
   }
 }
 .l-contents.-img-bg .l-contentsBox.-conceptText {
-  top: 100%;
-  left: 23%;
+  top: 34%;
+  left: 21%;
   transform: translate(-50%, -50%);
   width: 40%;
 }
@@ -715,7 +749,7 @@ img {
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
+  width: 58%;
 }
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-top-kawagoeBtn {
@@ -1076,7 +1110,7 @@ img {
 @media screen and (max-width: 768px) {
   .l-flex--area .l-flex--contents.-header-top .flexItem.-logoArea {
     width: 100%;
-    padding: 1vh 40px 0 10px;
+    padding: 1vh 5px 0.5vh 5px;
   }
 }
 @media screen and (min-width: 767px) {

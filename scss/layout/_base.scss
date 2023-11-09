@@ -82,7 +82,7 @@ img{
 
 
 .w1200{
-	width: 75% !important;
+	width: 85% !important;
 	max-width: 1200px;
 	margin: auto;
 	text-align: center;
@@ -259,9 +259,19 @@ img{
 }
 .l-mgb_10{
 	margin-bottom : 8vh !important;
+	&.-s_0{
+		@include mq(sp){
+			margin-bottom: 0vh !important;
+		}
+	}
 	&.-s_1{
 		@include mq(sp){
 			margin-bottom: 1vh !important;
+		}
+	}
+	&.-s_2{
+		@include mq(sp){
+			margin-bottom: 2vh !important;
 		}
 	}
 	&.-s_3{
