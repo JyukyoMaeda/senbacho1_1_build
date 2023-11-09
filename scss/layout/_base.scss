@@ -82,7 +82,7 @@ img{
 
 
 .w1200{
-	width: 85% !important;
+	width: 75% !important;
 	max-width: 1200px;
 	margin: auto;
 	text-align: center;
@@ -94,6 +94,11 @@ img{
 	&.-s95{
 		@include mq(sp){
 			width: 95% !important;
+		}
+	}
+	&.-s90{
+		@include mq(sp){
+			width: 88% !important;
 		}
 	}
 }

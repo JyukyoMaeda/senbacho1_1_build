@@ -136,7 +136,7 @@ img {
 }
 
 .w1200 {
-  width: 85% !important;
+  width: 75% !important;
   max-width: 1200px;
   margin: auto;
   text-align: center;
@@ -149,6 +149,11 @@ img {
 @media screen and (max-width: 768px) {
   .w1200.-s95 {
     width: 95% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .w1200.-s90 {
+    width: 88% !important;
   }
 }
 
@@ -753,8 +758,10 @@ img {
 }
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-top-kawagoeBtn {
-    top: 88%;
-    width: 30%;
+    top: 85%;
+    left: 50.1%;
+    transform: translateX(-50%);
+    width: 22.5%;
     max-width: 420px;
   }
 }
@@ -1110,7 +1117,7 @@ img {
 @media screen and (max-width: 768px) {
   .l-flex--area .l-flex--contents.-header-top .flexItem.-logoArea {
     width: 100%;
-    padding: 1vh 5px 0.5vh 5px;
+    padding: 1vh 5px 1.5vh 5px;
   }
 }
 @media screen and (min-width: 767px) {
@@ -2540,6 +2547,36 @@ img {
     margin: 0 10px;
   }
 }
+.top-slider .slide-arrow {
+  width: 5vw;
+  filter: drop-shadow(1px 1px 1px black);
+  pointer-events: all;
+  transition: 0.8s all;
+  z-index: 99;
+}
+@media screen and (min-width: 767px) {
+  .top-slider .slide-arrow {
+    width: 3vw;
+    max-width: 80px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .top-slider .slide-arrow {
+    width: 2.5vw;
+    max-width: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top-slider .slide-arrow:hover {
+    width: 4vw;
+  }
+}
+.top-slider .prev-arrow {
+  position: absolute;
+  top: 50%;
+  left: -6%;
+  transform: translateY(-50%);
+}
 @media screen and (min-width: 767px) {
   .top-slider .prev-arrow {
     left: -6%;
@@ -2551,6 +2588,12 @@ img {
   top: 46%;
   filter: drop-shadow(0.5px 0.5px 2.5px rgba(0, 0, 0, 0.356));
   transform: scale(1.1);
+}
+.top-slider .next-arrow {
+  position: absolute;
+  top: 50%;
+  right: -6%;
+  transform: translateY(-50%);
 }
 @media screen and (min-width: 767px) {
   .top-slider .next-arrow {
@@ -3132,7 +3175,7 @@ img {
 }
 @media screen and (min-width: 767px) {
   .l-text.-JYUKYO::after {
-    font-size: 0.3vw;
+    font-size: 0.6vw;
     line-height: 1.2;
   }
 }

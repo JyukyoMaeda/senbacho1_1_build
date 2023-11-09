@@ -416,7 +416,7 @@
             left: 50%;
             transform: translate(-50%,-50%);
             @include mq(tb){
-                font-size: .3vw;
+                font-size: .6vw;
                 line-height: 1.2;
             }
             @include mq(pc){
