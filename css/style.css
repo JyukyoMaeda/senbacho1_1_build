@@ -2158,6 +2158,21 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .side_btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  .side_btn {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 75px;
+    z-index: 1;
+  }
+}
+
 .l-linkImg {
   display: block;
   width: auto;
@@ -3398,7 +3413,7 @@ img {
   background: #3f2d00;
   border: 1px solid #3f2d00;
   position: fixed;
-  top: 33%;
+  top: 30%;
   right: 0%;
   z-index: 9999;
 }

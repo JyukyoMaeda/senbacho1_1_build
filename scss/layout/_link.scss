@@ -1,4 +1,18 @@
 
+
+.side_btn{
+    @include mq(sp){
+        display: none;
+    }
+    @include mq(tb){
+        position: fixed;
+        top: 30%;
+        left: 0;
+        width: 75px;
+        z-index: 1;
+    }
+}
+
 // a(画像リンク)
 .l-linkImg{
 	display: block;
