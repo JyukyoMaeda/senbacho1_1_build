@@ -2492,11 +2492,11 @@ img {
 .l-linkText.-more {
   width: 100%;
   height: auto;
-  padding: 2.5vh 3.5vw 2.5vh 0;
+  padding: 2.5vh 0;
 }
 @media screen and (min-width: 767px) {
   .l-linkText.-more {
-    padding: 2.5vh 3.5vw 2.5vh 0;
+    padding: 2.5vh 0;
   }
 }
 .l-linkText.-more::after {
@@ -2510,7 +2510,7 @@ img {
 }
 @media screen and (min-width: 767px) {
   .l-linkText.-more::after {
-    width: 30%;
+    width: 45%;
     transform: translate(-57%, -50%);
   }
 }

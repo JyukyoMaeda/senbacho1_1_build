@@ -416,9 +416,11 @@
     &.-more{
         width: 100%;
         height: auto;
-        padding: 2.5vh 3.5vw 2.5vh 0;
+        padding: 2.5vh 0;
+        // padding: 2.5vh 3.5vw 2.5vh 0;
         @include mq(tb){
-            padding: 2.5vh 3.5vw 2.5vh 0;
+            padding: 2.5vh 0;
+            // padding: 2.5vh 3.5vw 2.5vh 0;
         }
         &::after{
             content: "View More >";
@@ -429,7 +431,7 @@
             right: 0%;
             transform: translateY(-50%, -50%);
             @include mq(tb){
-                width: 30%;
+                width: 45%;
                 transform: translate(-57%, -50%);
             }
         }
