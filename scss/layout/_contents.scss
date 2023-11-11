@@ -164,6 +164,21 @@
 					max-width: 420px;
 				}
 			}
+			&.-setsubiClose{
+				top: 94%;
+				left: 81%;
+				transform: translate(-50%, -50%);
+				width: 31%;
+				height: 13%;
+				background: #ffffff;
+				@include mq(tb){
+					top: 91%;
+					left: 85%;
+					transform: translate(-50%, -50%);
+					width: 31%;
+					height: 20%;
+				}
+			}
 
 			//サイト右側中段に表示 （PCのみ）
 			&.-right-topBtn{

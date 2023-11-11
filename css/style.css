@@ -765,6 +765,23 @@ img {
     max-width: 420px;
   }
 }
+.l-contents.-img-bg .l-contentsBox.-setsubiClose {
+  top: 94%;
+  left: 81%;
+  transform: translate(-50%, -50%);
+  width: 31%;
+  height: 13%;
+  background: #ffffff;
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-setsubiClose {
+    top: 91%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    width: 31%;
+    height: 20%;
+  }
+}
 .l-contents.-img-bg .l-contentsBox.-right-topBtn {
   top: 2.5%;
   left: 50%;
