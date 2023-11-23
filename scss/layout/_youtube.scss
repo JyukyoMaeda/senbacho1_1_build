@@ -10,4 +10,16 @@
             }
         }
     }
+    &.-videoArea{
+        text-align: center;
+        .videoArea-wrapper{
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            iframe,
+            video {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 }

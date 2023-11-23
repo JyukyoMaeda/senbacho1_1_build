@@ -179,7 +179,17 @@
 					height: 20%;
 				}
 			}
-
+			&.-videoBox{
+				top: 70%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				@include mq(tb){
+					top: 76%;
+					left: 72%;
+					width: 46%;
+				}
+			}
 			//サイト右側中段に表示 （PCのみ）
 			&.-right-topBtn{
 				top: 2.5%;

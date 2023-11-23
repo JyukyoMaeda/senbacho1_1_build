@@ -16,9 +16,9 @@
 		}
 		.flexItem{
 			&.-youtubeBox{
-				padding: 0 5vw;
+				// padding: 0 5vw;
 				@include mq(tb){
-					padding: 0 1.5vw;
+					// padding: 0 1.5vw;
 				}
 				&.-left{
 					@include mq(tb){
