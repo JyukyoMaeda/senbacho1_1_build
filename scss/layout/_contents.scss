@@ -234,7 +234,15 @@
 					padding: 0% 24%;
 				}
 			}
-
+			&.-a{
+				top: 65%;
+				left: 7%;
+				width: auto;
+				@include mq(tb){
+					top: 102%;
+					left: 0;
+				}
+			}
 
 
 
