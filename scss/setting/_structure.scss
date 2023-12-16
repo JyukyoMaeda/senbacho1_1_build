@@ -17,3 +17,10 @@ $breakpoint: (
         @content;
     }
 }
+
+.s-M{
+    font-size: 10px;
+    @include mq(tb){
+        font-size: 18px;
+    }
+}

@@ -1,4 +1,13 @@
 @charset "UTF-8";
+.s-M {
+  font-size: 10px;
+}
+@media screen and (min-width: 767px) {
+  .s-M {
+    font-size: 18px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
